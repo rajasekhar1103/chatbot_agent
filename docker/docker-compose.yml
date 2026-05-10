@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  chatbot-platform:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - LOG_LEVEL=info
+      - MEMORY_STORE_PATH=/data/memory_store.json
+    volumes:
+      - ./data:/data
