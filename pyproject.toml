@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatbot_platform"
+version = "0.1.0"
+description = "Stateful AI orchestration platform with LangGraph, LangChain, and HITL workflows."
+authors = ["Chatbot Platform <noreply@example.com>"]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Framework :: AsyncIO",
+    "Topic :: Artificial Intelligence",
+]
+
+dependencies = [
+    "fastapi>=0.103.0",
+    "uvicorn[standard]>=0.23.0",
+    "pydantic>=2.8.0",
+    "python-dotenv>=1.0.0",
+    "langchain>=0.0.400",
+    "langgraph>=0.0.10",
+    "httpx>=0.27.0",
+    "aiofiles>=23.2.0",
+    "rich>=13.0.0",
+    "tenacity>=8.2.0",
+    "orjson>=3.9.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/rajasekhar1103/chatbot_agent"
+"Repository" = "https://github.com/rajasekhar1103/chatbot_agent"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
